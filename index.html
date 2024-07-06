@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kas Tracker</title>
+	<style type="text/css">
+		table, th, td, tr {
+			border-collapse: collapse;
+			border: 1px solid gray;
+			text-align: center;
+		}
+		table {
+			width: 100%;
+		}
+		button, table, table > * {
+			color: gray;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		const title = document.createElement("h1");
+		document.body.appendChild(title);
+		title.id = "Title";
+		
+		const titleContents = document.getElementById("Title"); 
+		titleContents.innerHTML = "Inventaris"
+		let changeTitle = document.getElementById("Title");
+		changeTitle.addEventListener("click", ()=> {
+			let editableTitle = document.createElement("input")
+			let confirmButton = document.createElement("button")
+			editableTitle.type = "text";
+			editableTitle.id = title.id;
+			editableTitle.value = titleContents.innerHTML;
+			title.parentNode.replaceChild(editableTitle, title)
+		});
+	</script>
+	<p>lorem ipsum dolor sit amet</p>
+	<table>
+		<tr>
+			<th>No</th>
+			<th>Nama</th>
+			<th>Deskripsi</th>
+			<th>Lokasi</th>
+			<th>Foto</th>
+		</tr>
+		<tr>
+			<td>1. </td>
+			<td>Sapu Ijuk</td>
+			<td>Sapu yang biasa digunakan di dalam kelas</td>
+			<td>Kelas XII MIPA 3</td>
+			<td>N/A</td>
+		</tr>
+	</table>
+
+	<button>Tambah Inventaris</button>
+
+
+</body>
+</html>
